@@ -1,6 +1,6 @@
 # 使用说明文档
-编辑环境准备
-vue-cli说明
+1. 编辑环境准备
+2. vue-cli说明
 
 # social_practice
 
