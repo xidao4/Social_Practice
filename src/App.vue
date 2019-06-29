@@ -1,13 +1,23 @@
 <template>
   <div id="app">
     <div id="nav">
-      <el-button round>element button</el-button> |
+      <el-button round @click='use'>element button</el-button> |
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    use() {
+      this.$message('this button use elementUI and message');
+    }
+  }
+}
+</script>
 
 <style>
 #app {
