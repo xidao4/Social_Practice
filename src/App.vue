@@ -10,10 +10,23 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   methods: {
     use() {
+      let data;
       this.$message('this button use elementUI and message');
+      
+      axios.post('http://127.0.0.1:8999/user/account', {
+        "name":"test3",
+        "email":"12345",
+        "password":"123"
+      }).then(response => {
+        console.log(response);
+      }).catch(err => {
+        console.log('connect fail.');
+      })
     }
   }
 }
