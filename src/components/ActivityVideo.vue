@@ -1,6 +1,6 @@
 <template>
   <div>
-    home page
+    视屏
   </div>
 </template>
 
@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style>
-
+  
 </style>
