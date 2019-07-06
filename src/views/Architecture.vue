@@ -15,8 +15,8 @@
 <script>
 export default {
   components: {
-    Import: () => import('@/components/ArchitectureImport.vue'),
-    Result: () => import('@/components/ArchitectureResult.vue'),
+    Import: () => import('./ArchitectureImport.vue'),
+    Result: () => import('./ArchitectureResult.vue'),
   }
   
 }

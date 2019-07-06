@@ -18,9 +18,9 @@
 <script>
 export default {
   components: {
-    Note: () => import('@/components/ActivityNote.vue'),
-    Video: () => import('@/components/ActivityVideo.vue'),
-    Photo: () => import('@/components/ActivityPhoto.vue'),
+    Note: () => import('./ActivityNote.vue'),
+    Video: () => import('./ActivityVideo.vue'),
+    Photo: () => import('./ActivityPhoto.vue'),
   },
   data() {
     return {

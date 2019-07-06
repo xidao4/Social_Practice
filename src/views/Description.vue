@@ -55,7 +55,7 @@
 <script>
 export default {
   components: {
-    Paragraph: () => import('@/components/DescriptionParagraph.vue')
+    Paragraph: () => import('./DescriptionParagraph.vue')
   },
   data() {
     return {
