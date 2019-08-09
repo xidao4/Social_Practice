@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Layout />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -8,17 +8,14 @@
 import axios from 'axios'
 
 export default {
-  components: {
-    Layout: () => import('@/layout/Layout.vue')
-  },
   mounted() {
-    this.$router.push('/home');
+    this.$router.push('/homepage');
   }
   // methods: {
   //   use() {
   //     let data;
   //     this.$message('this button use elementUI and message');
-      
+
   //     axios.post('http://127.0.0.1:8999/user/account', {
   //       "name":"test3",
   //       "email":"12345",

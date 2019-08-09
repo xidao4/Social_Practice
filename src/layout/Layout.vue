@@ -14,14 +14,10 @@
     </el-header>
     <el-container>
       <el-aside width="200px">
-        <el-menu 
+        <el-menu
           router
-          default-active="home"
+          default-active="map"
         >
-          <el-menu-item index="home">
-            <i class="el-icon-s-home"></i>
-            <span slot="title">主页</span>
-          </el-menu-item>
           <el-menu-item index="map">
             <i class="el-icon-location"></i>
             <span slot="title">电子地图</span>
@@ -50,8 +46,20 @@
 
 <script>
 export default {
-  
+
 }
+import anime from "animejs"
+anime({
+  targets: 'div',
+  translateX: [
+    { value: 100, duration: 1200 },
+    { value: 0, duration: 800 }
+  ],
+  rotate: '1turn',
+  backgroundColor: '#FFF',
+  duration: 2000,
+  loop: false
+});
 </script>
 
 <style>
@@ -60,7 +68,7 @@ export default {
   padding: 0;
 }
 .el-aside, .el-container{
-  /* background: gray; */
+  /*background: gray;*/
   height: 100%;
   vertical-align: middle;
 }
