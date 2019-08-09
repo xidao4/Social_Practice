@@ -51,7 +51,7 @@
 <!--    <el-radio-button label="left">left</el-radio-button>-->
 <!--  </el-radio-group>-->
 
-  <el-tabs :tab-position="tabPosition" style="height: 650px;">
+  <el-tabs :tab-position="tabPosition" style="height: 100%">
     <el-tab-pane label="照片记录">
       <activityPhoto/>
     </el-tab-pane>
