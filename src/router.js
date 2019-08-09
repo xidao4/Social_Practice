@@ -38,10 +38,23 @@ export default new Router({
       ]
     },
     {
+      path: '/activityPhoto',
+      name: 'activityPhoto',
+      component: () => import('./views/ActivityPhoto.vue')
+    },
+    {
+      path: '/activityVideo',
+      name: 'activityVideo',
+      component: () => import('./views/ActivityVideo.vue')
+    },{
+      path: '/activityNote',
+      name: 'activityNote',
+      component: () => import('./views/ActivityNote.vue')
+    },
+    {
       path: '*',
       name: 'other',
       redirect: {name: 'home'}
     }
-
   ]
 })

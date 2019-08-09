@@ -32,7 +32,7 @@
           </el-menu-item>
           <el-menu-item index="activity">
             <i class="el-icon-s-flag"></i>
-            <span slot="title">活动记录</span>
+            <span slot="title">实践足迹</span>
           </el-menu-item>
         </el-menu>
       </el-aside>
