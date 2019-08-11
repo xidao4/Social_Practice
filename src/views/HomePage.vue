@@ -1,11 +1,78 @@
 <template>
 
-    <el-container>
-        <el-main>
-            <el-button type="primary" @click="jump">go to home</el-button>
-<!--            <el-image :src="require('assets/images/logo.png')"></el-image>-->
-<!--            <canvas class="fireworks"></canvas>-->
-        </el-main>
+    <el-container style="height: 100%" direction="vertical" class="bg">
+
+        <el-header>
+            <el-row>
+                <el-col span="3" offset="20">
+                    <el-link icon="el-icon-lollipop" style="font-size: 20px" @click="describe">{{header}}</el-link>
+                </el-col>
+            </el-row>
+            <el-row>
+                <el-col offset="11">
+                    <div style="display: flex; margin-top: 2px; height: 220px;">
+                        <transition name="el-zoom-in-center">
+                            <div v-show="show_description" class="transition-box">
+                                <el-row style="font-size: 17px; font-weight: 700">选题名称</el-row>
+                                <el-row style="font-size: 13px; text-align: left">
+                                    未曾失落的遗迹——江宁传统村落建筑风貌调研
+                                </el-row>
+                                <el-row style="font-size: 17px; margin-top:15px; font-weight: 700">团队成员</el-row>
+                                <el-row style="font-size: 13px; text-align: left">
+                                    NJU_SE的准大二coder们
+                                </el-row>
+                            </div>
+                        </transition>
+                        <transition name="el-zoom-in-top">
+                            <div v-show="show_description" class="transition-box">
+                                <el-row style="font-size: 17px; font-weight: 700">背景与来源</el-row>
+                                <el-row style="font-size: 13px; text-align: left">
+                                        在城市化日益加深的当下，传统古村落日渐式微。根据党中央“社会主义新农村建设”的要求，
+                                    当前我国全面建设小康社会的重点难点在农村，农业丰则基础强，农民富则国家盛，农村稳则社会安；
+                                    没有农村的小康，就没有全社会的小康。
+                                </el-row>
+                            </div>
+                        </transition>
+                        <transition name="el-zoom-in-bottom">
+                            <div v-show="show_description" class="transition-box">
+                                <el-row style="font-size: 17px; font-weight: 700">意义</el-row>
+                                <el-row style="font-size: 13px; text-align: left">
+                                        既响应了“社会主义新农村建设”的号召，又能为江宁的传统村落的建设与保护献出一份力量，让
+                                    人们更好地了解古村落的文化和内涵，并且小组成员们可以提升知识水平和团队协作能力，在传统村落
+                                    的现代化建设中也留下南大学子的足迹。
+                                </el-row>
+                            </div>
+                        </transition>
+                    </div>
+                </el-col>
+            </el-row>
+            <el-row>
+
+            </el-row>
+        </el-header>
+
+        <el-container>
+            <el-main>
+                <el-row>
+                    <h1 class="name" style="font-size: 45px; margin-left: 5px; margin-top: 150px">南京大学软件学院
+                        拾遗者团队</h1>
+                </el-row>
+                <el-row style="margin-top: 10px">
+                    <el-col offset="6">
+                        <el-row>
+                            <el-link :underline="false" style="font-size: 20px" type="success" @click="jump">
+                                {{str2}}
+                                <i class="el-icon-truck el-icon--right"></i>
+                            </el-link>
+                        </el-row>
+                        <el-row v-show="show_icon" style="margin-top: 5px">
+                            <i class="el-icon-thumb"></i>
+                        </el-row>
+                    </el-col>
+                </el-row>
+            </el-main>
+        </el-container>
+
     </el-container>
 
 </template>
@@ -13,169 +80,73 @@
 <script>
     export default {
         name: 'HomePage',
+        data() {
+            return {
+                str1: '快来和coder们一起探索未曾失落的遗迹吧',
+                i: 0,
+                timer: 0,
+                str2: '',
+                show_icon: false,
+                show_description: false,
+                header:'关于我们'
+            }
+        },
         methods: {
+            typing() {
+                if (this.i <= this.str1.length) {
+                    this.str2 = this.str1.slice(0, this.i++);
+                    this.timer = setTimeout(() => {
+                        this.typing();
+                    }, 150);
+                } else {
+                    this.str2 = this.str1;
+                    clearTimeout(this.timer);
+                    this.show_icon = true;
+                }
+            },
+            describe(){
+                this.show_description = !this.show_description;
+                this.header = (this.header === '关于我们')?'收回':'关于我们';
+            },
             jump(){
                 this.$router.push('/home')
             }
+        },
+        mounted() {
+            this.typing();
         }
     }
-
-    // import anime from "animejs";
-
-
-    // anime({
-    //   targets: 'div',
-    //   translateX: [
-    //     { value: 100, duration: 1200 },
-    //     { value: 0, duration: 800 }
-    //   ],
-    //   rotate: '1turn',
-    //   backgroundColor: '#FFF',
-    //   duration: 2000,
-    //   loop: true
-    // });
-
-    // window.human = false;
-    //
-    // let canvasEl = document.querySelector('.fireworks');
-    // let ctx = canvasEl.getContext('2d');
-    // let numberOfParticules = 30;
-    // let pointerX = 0;
-    // let pointerY = 0;
-    // let tap = ('ontouchstart' in window || navigator.msMaxTouchPoints) ? 'touchstart' : 'mousedown';
-    // let colors = ['#FF1461', '#18FF92', '#5A87FF', '#FBF38C'];
-    //
-    // function setCanvasSize() {
-    //     canvasEl.width = window.innerWidth * 2;
-    //     canvasEl.height = window.innerHeight * 2;
-    //     canvasEl.style.width = window.innerWidth + 'px';
-    //     canvasEl.style.height = window.innerHeight + 'px';
-    //     canvasEl.getContext('2d').scale(2, 2);
-    // }
-    //
-    // function updateCoords(e) {
-    //     pointerX = e.clientX || e.touches[0].clientX;
-    //     pointerY = e.clientY || e.touches[0].clientY;
-    // }
-    //
-    // function setParticuleDirection(p) {
-    //     let angle = anime.random(0, 360) * Math.PI / 180;
-    //     let value = anime.random(50, 180);
-    //     let radius = [-1, 1][anime.random(0, 1)] * value;
-    //     return {
-    //         x: p.x + radius * Math.cos(angle),
-    //         y: p.y + radius * Math.sin(angle)
-    //     }
-    // }
-    //
-    // function createParticule(x,y) {
-    //     let p = {};
-    //     p.x = x;
-    //     p.y = y;
-    //     p.color = colors[anime.random(0, colors.length - 1)];
-    //     p.radius = anime.random(16, 32);
-    //     p.endPos = setParticuleDirection(p);
-    //     p.draw = function() {
-    //         ctx.beginPath();
-    //         ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
-    //         ctx.fillStyle = p.color;
-    //         ctx.fill();
-    //     }
-    //     return p;
-    // }
-    //
-    // function createCircle(x,y) {
-    //     let p = {};
-    //     p.x = x;
-    //     p.y = y;
-    //     p.color = '#FFF';
-    //     p.radius = 0.1;
-    //     p.alpha = .5;
-    //     p.lineWidth = 6;
-    //     p.draw = function() {
-    //         ctx.globalAlpha = p.alpha;
-    //         ctx.beginPath();
-    //         ctx.arc(p.x, p.y, p.radius, 0, 2 * Math.PI, true);
-    //         ctx.lineWidth = p.lineWidth;
-    //         ctx.strokeStyle = p.color;
-    //         ctx.stroke();
-    //         ctx.globalAlpha = 1;
-    //     }
-    //     return p;
-    // }
-    //
-    // function renderParticule(anim) {
-    //     for (const i = 0; i < anim.animatables.length; i++) {
-    //         anim.animatables[i].target.draw();
-    //     }
-    // }
-    //
-    // function animateParticules(x, y) {
-    //     let circle = createCircle(x, y);
-    //     let particules = [];
-    //     for (let i = 0; i < numberOfParticules; i++) {
-    //         particules.push(createParticule(x, y));
-    //     }
-    //     anime.timeline().add({
-    //         targets: particules,
-    //         x: function(p) { return p.endPos.x; },
-    //         y: function(p) { return p.endPos.y; },
-    //         radius: 0.1,
-    //         duration: anime.random(1200, 1800),
-    //         easing: 'easeOutExpo',
-    //         update: renderParticule
-    //     })
-    //         .add({
-    //             targets: circle,
-    //             radius: anime.random(80, 160),
-    //             lineWidth: 0,
-    //             alpha: {
-    //                 value: 0,
-    //                 easing: 'linear',
-    //                 duration: anime.random(600, 800),
-    //             },
-    //             duration: anime.random(1200, 1800),
-    //             easing: 'easeOutExpo',
-    //             update: renderParticule,
-    //             offset: 0
-    //         });
-    // }
-    //
-    // let render = anime({
-    //     duration: Infinity,
-    //     update: function() {
-    //         ctx.clearRect(0, 0, canvasEl.width, canvasEl.height);
-    //     }
-    // });
-    //
-    // document.addEventListener(tap, function(e) {
-    //     window.human = true;
-    //     render.play();
-    //     updateCoords(e);
-    //     animateParticules(pointerX, pointerY);
-    // }, false);
-    //
-    // let centerX = window.innerWidth / 2;
-    // let centerY = window.innerHeight / 2;
-    //
-    // function autoClick() {
-    //     if (window.human) return;
-    //     animateParticules(
-    //         anime.random(centerX-50, centerX+50),
-    //         anime.random(centerY-50, centerY+50)
-    //     );
-    //     anime({duration: 200}).finished.then(autoClick);
-    // }
-    //
-    // autoClick();
-    // setCanvasSize();
-    // window.addEventListener('resize', setCanvasSize, false);
 
 </script>
 
 <style scoped>
-    .el-main{
-
+    .bg{
+        background-image: url("./assets/images/coutryside.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index:1;
     }
-
+    .item{
+        background: #ffecd2;
+    }
+    .aside{
+        background: inherit;
+        text-align: center;
+    }
+    .name{
+        font: 5em Brush Script MT;
+        text-shadow: 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    }
+    .transition-box{
+        margin: 10px;
+        width: 200px;
+        height: 220px;
+        border-radius: 4px;
+        padding: 10px;
+        box-sizing: border-box;
+        background: rgba(255,240,199,0.5);
+        color: #000000;
+    }
 </style>
