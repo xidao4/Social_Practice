@@ -5,8 +5,33 @@
         <el-header>
             <el-row>
                 <el-col span="3" offset="20">
-                    <el-link icon="el-icon-lollipop" style="font-size: 20px" @click="describe">{{header}}</el-link>
+                    <el-link icon="el-icon-lollipop" style="font-size: 20px; margin-top: 20px;
+                           color: black " @click="describe">{{header}}</el-link>
                 </el-col>
+
+<!--                <el-col span="1">-->
+<!--                    <el-dropdown trigger="hover" class="admin-info right">-->
+<!--                        <el-image src="image_nju" :fit="contain" alt="avatar"/>-->
+<!--                        <el-dropdown-menu slot="dropdown">-->
+<!--                            <el-dropdown-item @click.native="logout">-->
+<!--                                <i class="el-icon-back"></i>-->
+<!--                                <span>关于南大</span>-->
+<!--                            </el-dropdown-item>-->
+<!--                        </el-dropdown-menu>-->
+<!--                    </el-dropdown>-->
+<!--                </el-col>-->
+
+<!--                <el-col span="1">-->
+<!--                    <el-dropdown trigger="hover" class="admin-info right">-->
+<!--                        <el-avatar src="image_se" size="30" alt="avatar"/>-->
+<!--                        <el-dropdown-menu slot="dropdown">-->
+<!--                            <el-dropdown-item @click.native="logout">-->
+<!--                                <i class="el-icon-back"></i>-->
+<!--                                <span>关于南大软院</span>-->
+<!--                            </el-dropdown-item>-->
+<!--                        </el-dropdown-menu>-->
+<!--                    </el-dropdown>-->
+<!--                </el-col>-->
             </el-row>
             <el-row>
                 <el-col offset="11">
@@ -54,13 +79,14 @@
         <el-container>
             <el-main>
                 <el-row>
-                    <h1 class="name" style="font-size: 45px; margin-left: 5px; margin-top: 150px">南京大学软件学院
+                    <h1 class="name" style="font-size: 45px; margin-left: 5px; margin-top: 170px">南京大学软件学院
                         拾遗者团队</h1>
                 </el-row>
                 <el-row style="margin-top: 10px">
                     <el-col offset="6">
                         <el-row>
-                            <el-link :underline="false" style="font-size: 20px" type="success" @click="jump">
+                            <el-link :underline="false" style="font-size: 20px" type="success" @click="jump"
+                                     class="welcome">
                                 {{str2}}
                                 <i class="el-icon-truck el-icon--right"></i>
                             </el-link>
@@ -88,7 +114,9 @@
                 str2: '',
                 show_icon: false,
                 show_description: false,
-                header:'关于我们'
+                header:'关于我们',
+                image_nju: require("./assets/images/nju.jpg"),
+                image_se: require("./assets/images/se.jpg")
             }
         },
         methods: {
@@ -134,10 +162,16 @@
         text-align: center;
     }
     .name{
-        font: 5em Brush Script MT;
+        font: 5em Wawati SC;
+        /*文字阴影*/
         text-shadow: 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa,
         0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 5px 10px rgba(0,0,0,.25),
         0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    }
+    .welcome{
+        font: 5em Hanzipen SC;
+        font-weight: 700;
+        color: #05cc27;
     }
     .transition-box{
         margin: 10px;

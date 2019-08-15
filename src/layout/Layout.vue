@@ -1,51 +1,39 @@
 <template>
-  <el-container>
-    <el-header :style="{ height: 'none' }">
-      <el-row>
-        <el-col :span='24' :style="{ height: '25px' }">
-          banner
+  <el-container direction="vertical">
+    <el-header style="height: 200px">
+
+      <el-row class="banner">
+        <el-col :span='8'>
+          <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+            <el-menu-item index="map">电子地图</el-menu-item>
+            <el-menu-item index="architecture">建筑风貌</el-menu-item>
+            <el-menu-item index="description">文图介绍</el-menu-item>
+            <el-menu-item index="activity">实践足迹</el-menu-item>
+          </el-menu>
         </el-col>
       </el-row>
+
       <el-row>
-        <el-col :span='24' :style="{ height: '200px' }">
-          <span style="display: block; margin: 100px">picture</span>
+        <el-col :span='24' class="picture">
+          <el-image :src="logo" :fit="contain" ></el-image>
         </el-col>
       </el-row>
     </el-header>
-    <el-container>
-      <el-aside width="200px">
-        <el-menu
-          router
-          default-active="map"
-        >
-          <el-menu-item index="map">
-            <i class="el-icon-location"></i>
-            <span slot="title">电子地图</span>
-          </el-menu-item>
-          <el-menu-item index="architecture">
-            <i class="el-icon-picture"></i>
-            <span slot="title">建筑风貌</span>
-          </el-menu-item>
-          <el-menu-item index="description">
-            <i class="el-icon-s-order"></i>
-            <span slot="title">文图介绍</span>
-          </el-menu-item>
-          <el-menu-item index="activity">
-            <i class="el-icon-s-flag"></i>
-            <span slot="title">实践足迹</span>
-          </el-menu-item>
-        </el-menu>
-      </el-aside>
-      <el-main>
-        <router-view></router-view>
-      </el-main>
-    </el-container>
+
+    <el-main>
+      <router-view></router-view>
+    </el-main>
+
   </el-container>
-  <!-- <router-view></router-view> -->
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      logo:require("./assets/logo4.gif"),
+    }
+  }
 
 }
 import anime from "animejs"
@@ -64,12 +52,32 @@ anime({
 
 <style>
 .el-header {
-  background: #B3C0D1;
-  padding: 0;
-}
-.el-aside, .el-container{
+  background: black;
+   padding: 0;
+ }
+.el-container{
   /*background: gray;*/
   height: 100%;
   vertical-align: middle;
 }
+  .banner{
+    margin-top: 5px;
+    background: black;
+  }
+  .el-menu-demo{
+    background: black;
+  }
+  .el-menu-demo:hover{
+
+  }
+  .el-menu-item:hover{
+    background-color: #8c939d !important;
+  }
+  .picture{
+    background: black;
+    /*background: url("assets/logo.gif") no-repeat left;*/
+    /*background-image: url("assets/static_logo.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+  }
 </style>
