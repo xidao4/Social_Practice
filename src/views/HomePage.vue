@@ -115,8 +115,8 @@
                 show_icon: false,
                 show_description: false,
                 header:'关于我们',
-                image_nju: require("./assets/images/nju.jpg"),
-                image_se: require("./assets/images/se.jpg")
+                // image_nju: require("./assets/images/nju.jpg"),
+                // image_se: require("./assets/images/se.jpg")
             }
         },
         methods: {
