@@ -16,7 +16,7 @@ export default {
     data(){
         return{
             item:'',
-            allImage:[require('./assets/1.jpg'),require('./assets/2.jpg'),require('./assets/3.jpg'),require('./assets/hezhao.jpg')]
+            allImage:[require('./assets/images/1.jpg'),require('./assets/images/2.jpg'),require('./assets/images/3.jpg'),require('./assets/images/hezhao.jpg')]
             // movie_src:require('./assets/test.mp4'),
             // img_src: 'https://www.baidu.com/img/bd_logo1.png'
         }
