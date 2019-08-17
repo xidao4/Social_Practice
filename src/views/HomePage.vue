@@ -3,8 +3,8 @@
     <el-container style="height: 100%" direction="vertical" class="bg">
 
         <el-header>
-            <el-row>
-                <el-col span="3" offset="20">
+            <el-row type="flex" justify = "end">
+                <el-col span="3">
                     <el-link icon="el-icon-lollipop" style="font-size: 20px; margin-top: 20px;
                            color: black " @click="describe">{{header}}</el-link>
                 </el-col>
@@ -33,9 +33,9 @@
 <!--                    </el-dropdown>-->
 <!--                </el-col>-->
             </el-row>
-            <el-row>
-                <el-col offset="11">
-                    <div style="display: flex; margin-top: 2px; height: 220px;">
+            <el-row type="flex" justify = "end">
+                <el-col span="13">
+                    <div style="display: flex; margin-top: 2px; height: 220px">
                         <transition name="el-zoom-in-center">
                             <div v-show="show_description" class="transition-box">
                                 <el-row style="font-size: 17px; font-weight: 700">选题名称</el-row>
