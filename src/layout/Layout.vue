@@ -3,7 +3,10 @@
     <el-header style="height: 200px">
 
       <el-row class="banner">
-        <el-col :span='8'>
+        <el-col span="3" style="margin-top: 15px" >
+          <el-link icon="el-icon-d-arrow-left" underline="false" @click="goBack" style="font-size: 20px">返回首页</el-link>
+        </el-col>
+        <el-col :span='8' offset="10">
           <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
             <el-menu-item index="map">电子地图</el-menu-item>
             <el-menu-item index="architecture">建筑风貌</el-menu-item>
@@ -15,7 +18,7 @@
 
       <el-row>
         <el-col :span='24' class="picture">
-          <el-image :src="logo" :fit="contain" ></el-image>
+          <el-image :src="logo" @click="goBack"></el-image>
         </el-col>
       </el-row>
     </el-header>
@@ -31,7 +34,13 @@
 export default {
   data(){
     return{
-      logo:require("./assets/logo4.gif"),
+      activeIndex: 'activity',
+      logo:require("./assets/logo4.gif")
+    }
+  },
+  methods:{
+    goBack(){
+      this.$router.push('/homepage')
     }
   }
 
@@ -52,7 +61,7 @@ anime({
 
 <style>
 .el-header {
-  background: black;
+  /*background: black;*/
    padding: 0;
  }
 .el-container{
@@ -62,16 +71,8 @@ anime({
 }
   .banner{
     margin-top: 5px;
-    background: black;
   }
   .el-menu-demo{
-    background: black;
-  }
-  .el-menu-demo:hover{
-
-  }
-  .el-menu-item:hover{
-    background-color: #8c939d !important;
   }
   .picture{
     background: black;

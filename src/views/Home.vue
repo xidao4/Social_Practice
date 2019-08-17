@@ -12,7 +12,7 @@
           Layout: () => import('@/layout/Layout.vue')
       },
       mounted() {
-          this.$router.push('/map');
+          this.$router.push('/activity');
       }
   }
 
