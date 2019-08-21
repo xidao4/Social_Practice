@@ -9,29 +9,29 @@
                            color: black " @click="describe">{{header}}</el-link>
                 </el-col>
 
-<!--                <el-col span="1">-->
-<!--                    <el-dropdown trigger="hover" class="admin-info right">-->
-<!--                        <el-image src="image_nju" :fit="contain" alt="avatar"/>-->
-<!--                        <el-dropdown-menu slot="dropdown">-->
-<!--                            <el-dropdown-item @click.native="logout">-->
-<!--                                <i class="el-icon-back"></i>-->
-<!--                                <span>关于南大</span>-->
-<!--                            </el-dropdown-item>-->
-<!--                        </el-dropdown-menu>-->
-<!--                    </el-dropdown>-->
-<!--                </el-col>-->
+                <!--                <el-col span="1">-->
+                <!--                    <el-dropdown trigger="hover" class="admin-info right">-->
+                <!--                        <el-image src="image_nju" :fit="contain" alt="avatar"/>-->
+                <!--                        <el-dropdown-menu slot="dropdown">-->
+                <!--                            <el-dropdown-item @click.native="logout">-->
+                <!--                                <i class="el-icon-back"></i>-->
+                <!--                                <span>关于南大</span>-->
+                <!--                            </el-dropdown-item>-->
+                <!--                        </el-dropdown-menu>-->
+                <!--                    </el-dropdown>-->
+                <!--                </el-col>-->
 
-<!--                <el-col span="1">-->
-<!--                    <el-dropdown trigger="hover" class="admin-info right">-->
-<!--                        <el-avatar src="image_se" size="30" alt="avatar"/>-->
-<!--                        <el-dropdown-menu slot="dropdown">-->
-<!--                            <el-dropdown-item @click.native="logout">-->
-<!--                                <i class="el-icon-back"></i>-->
-<!--                                <span>关于南大软院</span>-->
-<!--                            </el-dropdown-item>-->
-<!--                        </el-dropdown-menu>-->
-<!--                    </el-dropdown>-->
-<!--                </el-col>-->
+                <!--                <el-col span="1">-->
+                <!--                    <el-dropdown trigger="hover" class="admin-info right">-->
+                <!--                        <el-avatar src="image_se" size="30" alt="avatar"/>-->
+                <!--                        <el-dropdown-menu slot="dropdown">-->
+                <!--                            <el-dropdown-item @click.native="logout">-->
+                <!--                                <i class="el-icon-back"></i>-->
+                <!--                                <span>关于南大软院</span>-->
+                <!--                            </el-dropdown-item>-->
+                <!--                        </el-dropdown-menu>-->
+                <!--                    </el-dropdown>-->
+                <!--                </el-col>-->
             </el-row>
             <el-row type="flex" justify = "end">
                 <el-col span="13">
@@ -52,7 +52,7 @@
                             <div v-show="show_description" class="transition-box">
                                 <el-row style="font-size: 17px; font-weight: 700">背景与来源</el-row>
                                 <el-row style="font-size: 13px; text-align: left">
-                                        在城市化日益加深的当下，传统古村落日渐式微。根据党中央“社会主义新农村建设”的要求，
+                                    在城市化日益加深的当下，传统古村落日渐式微。根据党中央“社会主义新农村建设”的要求，
                                     当前我国全面建设小康社会的重点难点在农村，农业丰则基础强，农民富则国家盛，农村稳则社会安；
                                     没有农村的小康，就没有全社会的小康。
                                 </el-row>
@@ -62,7 +62,7 @@
                             <div v-show="show_description" class="transition-box">
                                 <el-row style="font-size: 17px; font-weight: 700">意义</el-row>
                                 <el-row style="font-size: 13px; text-align: left">
-                                        既响应了“社会主义新农村建设”的号召，又能为江宁的传统村落的建设与保护献出一份力量，让
+                                    既响应了“社会主义新农村建设”的号召，又能为江宁的传统村落的建设与保护献出一份力量，让
                                     人们更好地了解古村落的文化和内涵，并且小组成员们可以提升知识水平和团队协作能力，在传统村落
                                     的现代化建设中也留下南大学子的足迹。
                                 </el-row>
@@ -78,12 +78,8 @@
 
         <el-container>
             <el-main>
-                <el-row>
-                    <h1 class="name" style="font-size: 45px; margin-left: 5px; margin-top: 170px">南京大学软件学院
-                        拾遗者团队</h1>
-                </el-row>
-                <el-row style="margin-top: 10px">
-                    <el-col offset="6">
+                <el-row style="margin-top: 283px">
+                    <el-col span="10" offset="12">
                         <el-row>
                             <el-link :underline="false" style="font-size: 20px" type="success" @click="jump"
                                      class="welcome">
@@ -149,7 +145,8 @@
 
 <style scoped>
     .bg{
-        background-image: url("./assets/images/coutryside.png");
+        background-image: url("./assets/images/coutryside3.png");
+        background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
         z-index:1;
@@ -169,7 +166,7 @@
         0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
     }
     .welcome{
-        font: 5em Hanzipen SC;
+        font: 5em SansSerif;
         font-weight: 700;
         color: #05cc27;
     }
