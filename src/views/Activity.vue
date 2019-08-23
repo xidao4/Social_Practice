@@ -7,7 +7,7 @@
       <div class="word">照片记录</div>
       <div>
         <img class='row_one' src="./assets/images/1_1.jpg" alt="nihao"/>
-        <img class='row_one' src="./assets/images/1_2.jpg" alt="nihao"/>
+        <img class='row_one' src="./assets/images/1_2_2.jpg" alt="nihao"/>
       </div>
       <div>
         <img class='row_two' src="./assets/images/2_1.jpg" alt="nihao"/>
@@ -49,13 +49,13 @@
     </div>
 
 
-    <div>
-      <div class="word">纪录视频</div>
-      <video v-bind:src="v2_src" controls="controls" class="v">
-        您的浏览器不支持 video 标签。
-      </video>
-      <div class="division"></div>
-    </div>
+    <!--    <div>-->
+    <!--      <div class="word">纪录视频</div>-->
+    <!--      <video v-bind:src="v2_src" controls="controls" class="v">-->
+    <!--        您的浏览器不支持 video 标签。-->
+    <!--      </video>-->
+    <!--      <div class="division"></div>-->
+    <!--    </div>-->
 
 
     <div>
@@ -102,7 +102,7 @@
                 // v1_src:require('./assets/v1.mp4')
                 // v2_src:require('./assets/v2.mp4')
                 v1_src:require('./assets/v1_2.mp4'),
-                v2_src:'',
+                // v2_src:'',
                 dialogVisible: false,
                 tabPosition: 'top',
                 item:'',
@@ -115,14 +115,12 @@
 
 <style>
   .row_one{
-    width:45%;
-    height:380px;
-    margin:12px;
+    width:48%;
+    margin:1%;
   }
   .row_two{
-    width:30%;
-    height:250px;
-    margin:12px;
+    width:31.33%;
+    margin:1%;
   }
   img{
     border-radius:12px;
@@ -167,6 +165,7 @@
     background-color: #d3dce6;
   }
 </style>
+
 
 
 
