@@ -4,12 +4,12 @@
 
         <el-header>
             <el-row type="flex" justify = "end">
-                <el-col span="3">
+                <el-col :span="3">
                     <el-link icon="el-icon-lollipop" style="font-size: 20px; margin-top: 20px;
                            color: black " @click="describe">{{header}}</el-link>
                 </el-col>
 
-                <!--                <el-col span="1">-->
+                <!--                <el-col :span="1">-->
                 <!--                    <el-dropdown trigger="hover" class="admin-info right">-->
                 <!--                        <el-image src="image_nju" :fit="contain" alt="avatar"/>-->
                 <!--                        <el-dropdown-menu slot="dropdown">-->
@@ -21,7 +21,7 @@
                 <!--                    </el-dropdown>-->
                 <!--                </el-col>-->
 
-                <!--                <el-col span="1">-->
+                <!--                <el-col :span="1">-->
                 <!--                    <el-dropdown trigger="hover" class="admin-info right">-->
                 <!--                        <el-avatar src="image_se" size="30" alt="avatar"/>-->
                 <!--                        <el-dropdown-menu slot="dropdown">-->
@@ -34,7 +34,7 @@
                 <!--                </el-col>-->
             </el-row>
             <el-row type="flex" justify = "end">
-                <el-col span="13">
+                <el-col :span="13">
                     <div style="display: flex; margin-top: 2px; height: 220px">
                         <transition name="el-zoom-in-center">
                             <div v-show="show_description" class="transition-box">
@@ -79,7 +79,7 @@
         <el-container>
             <el-main>
                 <el-row style="margin-top: 283px">
-                    <el-col span="10" offset="12">
+                    <el-col :span="10" :offset="12">
                         <el-row>
                             <el-link :underline="false" style="font-size: 20px" type="success" @click="jump"
                                      class="welcome">
@@ -119,9 +119,7 @@
             typing() {
                 if (this.i <= this.str1.length) {
                     this.str2 = this.str1.slice(0, this.i++);
-                    this.timer = setTimeout(() => {
-                        this.typing();
-                    }, 150);
+                    this.timer = setTimeout( this.typing, 150);
                 } else {
                     this.str2 = this.str1;
                     clearTimeout(this.timer);
