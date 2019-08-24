@@ -24,7 +24,7 @@
 
     <div>
 <!--      <div class="word">宣传视频</div>-->
-      <video v-bind:src="v1_src" controls="controls" class="v">
+      <video :src="v1_src" controls="controls" class="v">
         您的浏览器不支持 video 标签。
       </video>
       <a href="#">宣传视频没看过瘾？点击观看纪录视频</a>
