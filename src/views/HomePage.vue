@@ -2,7 +2,10 @@
 
     <el-container class="bg">
             <el-main class="bg-main">
-                <el-row style="margin-top: 18%">
+                <el-row style="margin-top: 17%;font-size: 3.5vw">
+                    南京大学软件学院 拾遗者团队
+                </el-row>
+                <el-row style="margin-top: 4%">
                     <el-link :underline="false" type="info" @click="jump"
                              class="welcome">
                         {{str2}}
@@ -11,14 +14,13 @@
                 </el-row>
             </el-main>
         <el-footer class="footer">
-            <el-link :underline="false" @click="drawer = true" class="name" type="success">关于我们</el-link>
-<!--            <el-image :src="aboutus"></el-image>-->
+            <el-image :src="aboutus" @click="drawer = true"></el-image>
+<!--            <el-link :underline="false" @click="drawer = true" class="name" type="success">关于我们</el-link>-->
             <el-drawer
                     :visible.sync="drawer"
                     :direction="direction"
-                    size="85%">
+                    size="68%">
                     <div class="introduction">
-                        <el-image :src="aboutus"></el-image>
                         <div>
                             <h3>选题名称</h3>
                             <span style="font-size: 1.2vw">未曾失落的遗迹——江宁传统村落建筑风貌调研</span>
@@ -48,7 +50,7 @@
                 i: 0,
                 timer: 0,
                 str2: '',
-                aboutus: require("./assets/images/aboutus5.gif"),
+                aboutus: require("./assets/images/aboutus3.gif"),
                 drawer: false,
                 direction: 'btt',
                 // exp: require("./assets/images/logo.png")
@@ -85,7 +87,7 @@
     }
     .bg-main{
         height: 85%;
-        background:url("./assets/images/countryside12.png") no-repeat center;
+        background:url("./assets/images/countryside.png") no-repeat center;
         background-size: cover;
         margin-bottom: 0;
     }
