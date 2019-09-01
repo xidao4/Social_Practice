@@ -9,7 +9,7 @@
         <el-col :span="8" :offset="10">
           <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
             <el-menu-item index="/activity">实践足迹</el-menu-item>
-            <el-menu-item index="/map" @click="open1">电子地图</el-menu-item>
+            <el-menu-item index="/map">电子地图</el-menu-item>
             <el-menu-item index="/architecture">建筑风貌</el-menu-item>
             <el-menu-item index="/description">文图介绍</el-menu-item>
           </el-menu>
@@ -42,14 +42,6 @@ export default {
     goBack(){
       this.$router.push('/homepage')
     },
-    // open1(){
-    //   this.$notify.info({
-    //     title: '提示',
-    //     message: '点击蓝色泡泡可以看到介绍哦~ 按住鼠标可以拖动地图～ 地图还可以放大缩小，快试一下吧～',
-    //     offset:80,
-    //     duration:5500
-    //   })
-    // },
   }
 
 }
