@@ -2,7 +2,7 @@
 
     <el-container class="bg">
             <el-main class="bg-main">
-                <el-row style="margin-top: 17%;font-size: 3.5vw">
+                <el-row style="margin-top: 17%;font-size: 4vw">
                     南京大学软件学院 拾遗者团队
                 </el-row>
                 <el-row style="margin-top: 4%">
@@ -19,7 +19,7 @@
             <el-drawer
                     :visible.sync="drawer"
                     :direction="direction"
-                    size="68%">
+                    size="80%">
                     <div class="introduction">
                         <div>
                             <h3>选题名称</h3>

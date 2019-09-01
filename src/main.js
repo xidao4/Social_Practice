@@ -11,6 +11,7 @@ Vue.use(responsive)
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
+
 new Vue({
   router,
   store,
