@@ -19,7 +19,7 @@ export default {
   //     axios.post('http://127.0.0.1:8999/user/account', {
   //       "name":"test3",
   //       "email":"12345",
-  //       "password":"123"
+  //       "password":"123"，
   //     }).then(response => {
   //       console.log(response);
   //     }).catch(err => {
@@ -45,5 +45,7 @@ html, body {
   color: #2c3e50;
   /* height: 1000px; */
   height: 100%;
+  padding:0px;
+  margin:0px;
 }
 </style>
