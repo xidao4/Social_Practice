@@ -28,10 +28,10 @@
         methods:{
             open1(){
                 this.$notify.info({
-                    title: '提示',
+                    title: '电子地图',
                     message: '点击蓝色泡泡可以看到介绍哦~ 按住鼠标可以拖动地图～ 地图还可以放大缩小，快试一下吧～',
                     offset:75,
-                    duration:0
+                    duration:4500
                 })
             },
         },
