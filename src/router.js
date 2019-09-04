@@ -26,11 +26,6 @@ export default new Router({
           name: 'architecture',
           component: () => import('./views/Architecture.vue')
         },
-        // {
-        //   path: '/description',
-        //   name: 'description',
-        //   component: () => import('./views/Description.vue')
-        // },
         {
           path: '/activity',
           name: 'activity',
