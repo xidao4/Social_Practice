@@ -30,7 +30,12 @@ export default new Router({
           path: '/activity',
           name: 'activity',
           component: () => import('./views/Activity.vue')
-        }
+        },
+        {
+          path: '/description',
+          name: 'description',
+          component: () => import('./views/Description.vue')
+        },
       ]
     },
     // {
