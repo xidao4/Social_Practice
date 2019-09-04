@@ -2,16 +2,16 @@
     <div id="description">
         <div class="container">
             <el-col span="6" style="margin-top: 15%">
-                <img @click="archi" class="img animated rotateInDownLeft" src="./assets/images/architecture4.png" alt="nihao"/>
+                <img @click="archi" class="img animated rotateInDownLeft" src="./assets/images/architecture10.png" alt="nihao"/>
             </el-col>
             <el-col span="6" style="margin-top: 25%">
-                <img @click="hist" class="img animated rotateInDownLeft" src="./assets/images/history3.png" alt="nihao"/>
+                <img @click="hist" class="img animated rotateInDownLeft" src="./assets/images/history10.png" alt="nihao"/>
             </el-col>
             <el-col span="6" style="margin-top: 5%">
-                <img @click="busi" class="img animated rotateInDownLeft" src="./assets/images/business3.png" alt="nihao"/>
+                <img @click="busi" class="img animated rotateInDownLeft" src="./assets/images/business10.png" alt="nihao"/>
             </el-col>
             <el-col span="6" style="margin-top: 15%">
-                <img @click="expe" class="img animated rotateInDownLeft" src="./assets/images/expectation8.png" alt="nihao"/>
+                <img @click="expe" class="img animated rotateInDownLeft" src="./assets/images/expectation10.png" alt="nihao"/>
             </el-col>
             <el-drawer
                     :title="name"

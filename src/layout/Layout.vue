@@ -6,12 +6,12 @@
         <el-col :span="3" style="margin-top: 15px" >
           <el-link icon="el-icon-d-arrow-left" :underline="false" @click="goBack" style="font-size: 20px">返回首页</el-link>
         </el-col>
-        <el-col :span="6" :offset="14">
+        <el-col :span="8" :offset="12">
           <el-menu router :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
             <el-menu-item index="/activity">实践足迹</el-menu-item>
             <el-menu-item index="/map">电子地图</el-menu-item>
             <el-menu-item index="/architecture">建筑风貌</el-menu-item>
-<!--            <el-menu-item index="/description">文图介绍</el-menu-item>-->
+            <el-menu-item index="/description">文图介绍</el-menu-item>
           </el-menu>
         </el-col>
       </el-row>
@@ -23,7 +23,7 @@
       </el-row>
     </el-header>
 
-    <el-main>
+    <el-main style="margin-top: 20px">
       <router-view></router-view>
     </el-main>
 
