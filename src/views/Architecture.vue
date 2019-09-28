@@ -6,12 +6,15 @@
     </div>
     <div class="container">
       <img @click='chuan' class="img animated bounceInRight" src="./assets/images/chuan.png" alt="nihao"/>
-      <img @click='jing' class="img animated bounceInUp" src="./assets/images/jing.png" alt="nihao"/>
+      <img @click='jing' class="img animated bounceInUp" src="./assets/images/jing3.png" alt="nihao"/>
       <img @click='jin' class="img animated bounceInLeft" src="./assets/images/jin.png" alt="nihao"/>
       <img @click='hui' class="img animated bounceInRight" src="./assets/images/hui.png" alt="nihao"/>
       <img @click='min' class="img animated bounceInDown" src="./assets/images/min.png" alt="nihao"/>
       <img @click='su' class="img animated bounceInLeft" src="./assets/images/su.png" alt="nihao"/>
     </div>
+    <el-link href="http://public.dupetrc.qiyi.us:31382/model_simplednn/model_archstyle" :underline="false"
+             style="font-size: 20px;margin: 13px">点此使用模型
+      <i class="el-icon-view el-icon--right"></i></el-link>
     <video :src="v3_src" controls="controls" class="v">
       您的浏览器不支持 video 标签。
     </video>

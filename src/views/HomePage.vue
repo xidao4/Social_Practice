@@ -22,6 +22,8 @@
                     size="80%">
                     <div class="introduction">
                         <div>
+                            <h3>指导老师</h3>
+                            <span style="font-size: 1.2vw">南京大学城市建筑与规划学院：祁毅老师</span>
                             <h3>选题名称</h3>
                             <span style="font-size: 1.2vw">未曾失落的遗迹——江宁传统村落建筑风貌调研</span>
                             <h3>背景与来源</h3>

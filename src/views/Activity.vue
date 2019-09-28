@@ -115,7 +115,7 @@
         data(){
             return{
                 // v2_src:require('./assets/v2.mp4')
-                v1_src:require('./assets/v1_2.mp4'),
+                v1_src:require('./assets/v1_3.mp4'),
                 // v2_src:'',
                 // v1_src:'',
                 dialogVisible: false,
